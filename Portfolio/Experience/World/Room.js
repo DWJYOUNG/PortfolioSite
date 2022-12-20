@@ -26,11 +26,11 @@ export default class Room {
 
             }
 
-            if(child.name === "Screen1"){
-                console.log(child);
+            if(child.name === "Screen1"){ 
                 child.material = new THREE.MeshBasicMaterial({
                     map: this.resources.items.screenOne,
                 });
+                console.log(child);
             }
 
         });
