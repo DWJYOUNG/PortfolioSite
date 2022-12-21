@@ -30,7 +30,7 @@ export default class Room {
                 child.material = new THREE.MeshBasicMaterial({
                     map: this.resources.items.screenOne,
                 });
-                console.log(child);
+                //console.log(child);
             }
 
         });
