@@ -19,7 +19,7 @@ export default class Environment {
         this.sunLight.shadow.normalBias = 0.05;
         //const helper = new THREE.CameraHelper(this.sunLight.shadow.camera);
         //this.scene.add(helper);
-        this.sunLight.position.set(10, 10, 6);
+        this.sunLight.position.set(-6, 12, 10);
         this.scene.add(this.sunLight);
 
         this.ambientLight = new THREE.AmbientLight("#ffffff", 1);

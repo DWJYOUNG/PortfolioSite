@@ -9,6 +9,7 @@ import Camera from "./Camera";
 import Renderer from "./Renderer";
 
 import World from "./World/World";
+import Controls from "./World/Controls";
 
 
 export default class Experience{
@@ -38,11 +39,16 @@ export default class Experience{
 
     resize(){
         this.camera.resize();
+        this.world.update();
         this.renderer.resize();
     }
 
     update(){
         this.camera.update();
+        this.world.update();
         this.renderer.update();
+        if (this.controls){
+            this.controls.update();
+        }
     }
 }
