@@ -54,7 +54,6 @@ export default class Resources extends EventEmitter {
                     this.video[asset.name]
                 );
                 //this.videoTexture[asset.name].flipY = true;
-                //this.videoTexture[asset.name].flipX = true;
                 this.videoTexture[asset.name].minFilter = THREE.LinearFilter;
                 this.videoTexture[asset.name].mageFilter = THREE.LinearFilter;
                 this.videoTexture[asset.name].generateMipmaps = false;

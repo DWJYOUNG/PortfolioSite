@@ -8,9 +8,17 @@
 
 html, body{
   font-family: "Montserrat", sans-serif;
+  color:var(--text-black);
 }
 
-/* Experience--------------------------------------------------------*/
+:root{
+  --text-black: #333332;
+  --primary-color: #ebebeb;
+  --primary-gray: #5A5A5A;
+
+}
+
+/* Experience------------------------------------------------------- */
 
 .experience{
   position: fixed;
@@ -23,7 +31,7 @@ html, body{
   height: 100%;
 }
 
-/* Page Itself--------------------------------------------------------*/
+/* Page Itself------------------------------------------------------- */
 
 .page{
   z-index:99999;
@@ -36,7 +44,160 @@ html, body{
   position: relative;
 }
 
-/* Hero Section--------------------------------------------------------*/
+/* Toggle Bar-------------------------------------------------------- */
+
+.toggle-bar{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: 48px;
+  right: 48px;
+  z-index: 999999999999999;
+}
+
+.sun-wrapper, 
+.moon-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-button{
+  cursor: pointer;
+  position: relative;
+  width: 56px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-gray);
+  border-radius: 999px;
+  margin: 0px 16px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.toggle-circle{
+  position: absolute;
+  left: 6px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle-button:hover .toggle-circle{
+  transform: scale(0.9); 
+}
+
+.slide{
+  left: 28px;
+}
+
+/* Section Formating------------------------------------------------------- */
+
+.section-margin{
+  height: 3000px;
+  width: 100%;
+}
+
+.section{
+  width: 50%;
+  padding: 1000px 4%;
+  margin: 0;
+  background-color:var(--primary-color) ;
+}
+
+.left{
+  margin-right: auto;
+}
+
+.right{
+  margin-left: auto;
+}
+
+.section-intro-wrapper{
+  position: relative;
+  padding: 20% 5%;
+  border-bottom: 2px solid var(--primary-gray);
+  padding-bottom: 400px;
+}
+
+.section-detail-wrapper{
+  position: relative;
+  padding: 20% 5%;
+}
+
+.section-heading{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.8;
+  margin-top: 64px;
+}
+
+.section-text{
+  line-height: 2;
+  margin-top: 18px;
+  font-size: 16px;
+}
+
+/* Fancy Decoration Part of the Section------------------------------- */
+
+.section-title{
+  position: relative;
+  color: var(--primary-gray);
+}
+
+.section-title-text{
+  display: block;
+  font-size:  40px;
+  font-weight: 500;
+  transform-origin: left;
+  transform: skewY(25deg);
+  z-index: 5;
+  text-transform: uppercase;
+}
+
+.styleOne,
+.styleTwo,
+.styleThree{
+  position: absolute;
+  display: block;
+  width: 100%;
+  max-width: 278px;
+  height: 60px;
+  border: 1px solid var(--primary-gray);
+  transform-origin: left;
+  transform: skewY(-25deg);
+}
+
+.styleOne{
+  top: 0px;
+}
+
+.styleTwo{
+  top: 80px;
+}
+
+.styleThree{
+  top: 80px;
+  transform: skewY(25deg);
+  background-color: var(--primary-gray);
+}
+
+.section-number{
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  color: var(--primary-gray);
+  font-size: 24px;
+}
+
+/* Hero Section------------------------------------------------------- */
 
 .hero{
   width: 100vw;
@@ -48,16 +209,33 @@ html, body{
   height: 100%;
   width: calc(100% - 160px);
   margin: 0 auto;
+  max-width: 1300px;
 }
 
 .hero-main{
   position: absolute;
-  bottom: 200px;
+  bottom: 80px;
   left: 0;
 }
 
 .hero-second{
   position: absolute;
-  top: calc(50% - 140px);
+  top: calc(50% - 200px);
   right: 0;
 }
+
+.hero-main-title{
+  font-size: 64px;
+}
+
+.hero-main-description{
+  font-size: 18px;
+}
+
+.hero-second-subheading{
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+
+
