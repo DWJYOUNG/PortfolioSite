@@ -94,9 +94,8 @@ export default class Room {
         roomLight.rotateX(-Math.PI/2);
         this.actualRoom.add(roomLight);
 
-        const roomLightHelper = new RectAreaLightHelper(roomLight);
-        roomLight.add(roomLightHelper);
-
+        // const roomLightHelper = new RectAreaLightHelper(roomLight);
+        // roomLight.add(roomLightHelper);
 
         this.scene.add(this.actualRoom);
     }
