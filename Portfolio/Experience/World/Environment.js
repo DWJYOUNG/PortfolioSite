@@ -10,14 +10,14 @@ export default class Environment {
         this.scene = this.experience.scene;
         this.resources = this.experience.resources;
 
-        this.gui = new GUI({ container: document.querySelector(".hero-main") });
-        this.obj = {
-            colorObj: { r: 0, g: 0, b: 0 },
-            intensity: 3,
-        }
+        // this.gui = new GUI({ container: document.querySelector(".hero-main") });
+        // this.obj = {
+        //     colorObj: { r: 0, g: 0, b: 0 },
+        //     intensity: 3,
+        // }
         
         this.setSunlight();
-        this.setGUI();
+        // this.setGUI();
     }
 
     setGUI() {
@@ -50,14 +50,14 @@ export default class Environment {
     switchTheme(theme) {
         if(theme === "dark") {
             GSAP.to(this.sunLight.color, {
-                r: 0.07058823529411765, 
-                g: 0.0784313725490196, 
-                b: 0.16862745098039217
+                r: 0.16470588235294117,
+                g: 0.2823529411764706,
+                b: 0.43529411764705883
             });
             GSAP.to(this.ambientLight.color, {
-                r: 0.07058823529411765, 
-                g: 0.0784313725490196, 
-                b: 0.16862745098039217
+                r: 0.16470588235294117,
+                g: 0.2823529411764706,
+                b: 0.43529411764705883
             });
             GSAP.to(this.sunLight,{
                 intensity: 0.78,
